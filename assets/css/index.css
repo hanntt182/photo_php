@@ -1,6 +1,12 @@
+
+
+.carousel-item {
+    height: 400px;
+}
+
 .cover-img {
-    width: 100%;
     height: auto;
-    max-height: 250px;
+    position: absolute;
+    bottom: 0;
     overflow: hidden;
 }

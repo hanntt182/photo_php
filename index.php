@@ -1,3 +1,17 @@
+<?php
+session_start();
+if (isset($_GET['view'])) {
+
+    $pages = array("home", "about");
+    if (in_array($_GET['view'], $pages)) {
+        $_page = $_GET['view'];
+    } else {
+        $_page = "home";
+    }
+} else {
+    $_page = "home";
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,12 +42,18 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img class="cover-img d-block w-100" src="assets/img/pineapple-cover.jpg" alt="First slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <form class="form-inline my-2 my-lg-0" style="display: block">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                            </form>
+                        </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="cover-img d-block w-100" src=".../800x400?auto=yes&bg=666&fg=444&text=Second slide" alt="Second slide">
+                        <img class="cover-img d-block w-100" src="assets/img/annie-spratt-277548-unsplash.jpg" alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="cover-img d-block w-100" src=".../800x400?auto=yes&bg=555&fg=333&text=Third slide" alt="Third slide">
+                        <img class="cover-img d-block w-100" src="assets/img/biel-morro-259739-unsplash.jpg" alt="Third slide">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -45,6 +65,11 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
+        </div>
+        <div>
+            <?php
+            require ("views/main/".$_page.".php");
+            ?>
         </div>
     </div>
 </div>
