@@ -17,11 +17,13 @@ if (isset($_GET['view'])) {
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
+    <link rel="icon" href="assets/img/icon/photo-camera.png">
+
     <!--Bootstrap v4.1.0 CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
           integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/index.css">
-    <title>Shopping</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>My Photo</title>
 </head>
 <body>
 <div id="container">
@@ -34,19 +36,15 @@ if (isset($_GET['view'])) {
     <div id="main">
         <div class="banner">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
+                <!--<ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
+                </ol>-->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img class="cover-img d-block w-100" src="assets/img/pineapple-cover.jpg" alt="First slide">
                         <div class="carousel-caption d-none d-md-block">
-                            <form class="form-inline my-2 my-lg-0" style="display: block">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                            </form>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -64,6 +62,16 @@ if (isset($_GET['view'])) {
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
+            </div>
+            <div class="search_banner">
+                <form class="form-inline">
+                    <div class="input-group">
+                        <input class="form-control" type="search" aria-label="Search">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
         <div>

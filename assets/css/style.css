@@ -1,0 +1,23 @@
+.navbar-nav.right {
+    margin-right: 0!important;
+}
+
+.carousel-item {
+    height: 400px;
+}
+
+.cover-img {
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.search_banner {
+    position: absolute;
+    top: 250px;
+}
+
+.search_banner input {
+    width: 500px;
+}
