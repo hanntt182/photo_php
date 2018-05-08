@@ -16,8 +16,36 @@
 .search_banner {
     position: absolute;
     top: 250px;
+    left: 500px;
 }
 
 .search_banner input {
-    width: 500px;
+    width: 500px!important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.register-left {
+    height: 100%;
+    width: 40%;
+    background: url("../img/user/register-unsplash.jpg");
+    background-size: cover;
+}
+
+.register-left .row {
+    margin: 0;
+    height: 200px;
+    padding-left: 50px;
+}
+
+.register-right {
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 60%;
+}
+
+.register-page{
+    height: 100%;
 }

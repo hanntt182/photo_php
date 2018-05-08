@@ -2,14 +2,15 @@
 session_start();
 if (isset($_GET['view'])) {
 
-    $pages = array("home", "about");
-    if (in_array($_GET['view'], $pages)) {
-        $_page = $_GET['view'];
+    require ("views/common/constant.php");
+    $pages = $view;
+    if (array_key_exists($_GET['view'], $pages)) {
+        $_page = $pages[$_GET['view']];
     } else {
-        $_page = "home";
+        $_page = "views/main/home";
     }
 } else {
-    $_page = "home";
+    $_page = "views/main/home";
 }
 ?>
 <!DOCTYPE html>
@@ -76,7 +77,7 @@ if (isset($_GET['view'])) {
         </div>
         <div>
             <?php
-            require ("views/main/".$_page.".php");
+            require ($_page.".php");
             ?>
         </div>
     </div>
